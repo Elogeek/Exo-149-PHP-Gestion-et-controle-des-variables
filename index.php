@@ -8,30 +8,34 @@
 $var = 0;
 // TODO votre code ici.
 
-
-
+if(empty($var)) {
+    echo " la variable est vide <br>";
+}
+else{
+    echo "la variable n'est pas vide";
+}
 
 /**
  * 2. Détruisez la variable déclarée, tentez de l'afficher ensuite en utilisant un print_r.
  */
 $eraseMe = "Please erase me !";
 // TODO votre code ici.
-
+unset($eraseMe);
 
 /**
  * 3. Déclarez vous même un tableau et utilisez var_dump pour afficher toutes les informations de debug.
  */
 // TODO votre code ici.
-
+$array = ["sara", "Chan", "Yuki", "Natsu"];
 echo "<br>";
+var_dump($array);
 
 /**
  * 4. Faites la même chose avec le même tableau, mais pour la méthode print_r.
  */
 // TODO votre code ici.
-
+print_r($array);
 echo "<br>";
-
 
 /**
  * 5. A l'aide de la méthode isset, testez si la clé du tableau associatif 'doNotExists' existe ( SANS TOUCHER AU TABLEAU )
@@ -40,6 +44,12 @@ echo "<br>";
 $tab = ["test" => true, "name" => "Doe", "age" => 32];
 // TODO Votre code ici.
 
+if(isset($tab["doNotExist"])) {
+    echo " j'existe"."<br>";
+}
+else {
+    echo "je n'existe pas". "<br>";
+}
 
 /**
  * 6. Créez une variable contenant:
@@ -63,3 +73,24 @@ $tab = ["test" => true, "name" => "Doe", "age" => 32];
  */
 
 // TODO votre code ici.
+$go = true;
+$number = 5;
+$float = 3.5;
+$text = "coucou";
+
+function test($item) {
+
+    if(is_bool($item)) {
+        echo " c'est un booléan";
+    }
+    if(is_int($item)) {
+        echo "c'est un entier";
+    }
+    if(is_float($item)) {
+        echo "c'est un flottant";
+    }
+    if(is_string($item)) {
+        echo "c'est un string";
+    }
+
+}
